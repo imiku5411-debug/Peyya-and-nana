@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 💗</title>
+<style>
+body {
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:sans-serif;
+  background:linear-gradient(to right,#a18cd1,#fbc2eb);
+}
+.card {
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  max-width:300px;
+}
+button {
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  background:#ff6b81;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+}
+img {
+  margin-top:15px;
+  max-width:100%;
+  border-radius:15px;
+  display:none;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Hai kamu 👀</h2>
+  <p id="text">Klik ini ya...</p>
+  <button onclick="next()">Klik 💗</button>
+  <img id="photo" src="https://i.imgur.com/4AiXzf8.jpeg">
+</div>
+
+<script>
+let step = 0;
+
+function next() {
+  let t = document.getElementById("text");
+  let img = document.getElementById("photo");
+
+  if(step===0){
+    t.innerHTML="Aku mau jujur...";
+  } else if(step===1){
+    t.innerHTML="Sebenernya aku suka kamu 💖";
+    img.style.display = "block";
+  } else if(step===2){
+    t.innerHTML="Lucu ga fotonya 😆";
+  } else {
+    t.innerHTML="Hehe 😳";
+  }
+
+  step++;
+}
+</script>
+
+</body>
+</html>
